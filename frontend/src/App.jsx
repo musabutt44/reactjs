@@ -1,13 +1,17 @@
 import "./App.css";
+import {routes, route} from "react-router-dom"
 import Moviecard from "./components/MovieCard";
 import Home from "./pages/home";
 function App()
 {
     return (
-        <>
-        {/* < Moviecard movie={{title: "React.js", release_date: "2025" }} /> */}
-        <Home/>
-        </>
+        <main className="main-content">
+             <routes>
+            <route path='/' element ={<Home/>}/>
+              <route path='/' element ={<Favorite/>}/>
+        </routes> 
+        </main>
+       
     )
 }
 
