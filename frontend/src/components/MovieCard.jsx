@@ -1,13 +1,26 @@
-import "./App.css";
-import Moviecard from "./components/Moviecard";
+function MovieCard ({movie}){
 
-function App()
-{
-    return (
-        <>
-        < Moviecard movie={{title: "Testing", release_date: "2024" }} />
-        </>
-    )
+    function onFavoriteClick()
+    {
+        alert("clicking")
+    }
+    
+
+    return <div className="movie-card">
+        <div className="movie-poster">
+            <img src={movie.url} alt={movie.title}/>
+            <div className="movie-overlay">
+                <button className="favorite-btn"  onClick={onFavoriteClick}>
+                    ♥
+                </button>
+            </div>
+        </div>
+        <div className="movie-info">
+            <h3>{movie.title}</h3>
+            <p>{movie.release_date}</p>
+        </div>
+    </div>
 }
 
-export default App;
+
+export default MovieCard;
