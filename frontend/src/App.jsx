@@ -1,15 +1,15 @@
 import "./App.css";
-import {routes, route} from "react-router-dom"
-import Moviecard from "./components/MovieCard";
-import Home from "./pages/home";
+import Home from "./pages/Home";       
+import Favorites from "./pages/Favorites";
+import { Routes, Route } from "react-router-dom"; 
 function App()
 {
     return (
         <main className="main-content">
-             <routes>
-            <route path='/' element ={<Home/>}/>
-              <route path='/' element ={<Favorite/>}/>
-        </routes> 
+             <Routes>
+            <Route path="/" element ={<Home/>}/>
+              <Route path="/favorites" element ={<Favorites/>}/>
+        </Routes> 
         </main>
        
     )
